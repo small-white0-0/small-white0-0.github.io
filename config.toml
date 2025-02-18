@@ -1,11 +1,33 @@
 # The URL the site will be built for
-base_url = "https://example.com"
+base_url = "https://tangyingpeng.cn"
+theme = "papermod"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+
+generate_feeds = true
+feed_filenames = [ "atom.xml" ]
+taxonomies = [
+    { name = "tags", feed = true }
+]
+[search]
+# Whether to include the title of the page/section in the index
+include_title = true
+# Whether to include the description of the page/section in the index
+include_description = false
+# Whether to include the path of the page/section in the index
+include_path = false
+# Whether to include the rendered content of the page/section in the index
+include_content = true
+# At which character to truncate the content to. Useful if you have a lot of pages and the index would
+# become too big to load on the site. Defaults to not being set.
+# truncate_content_length = 100
+# Wether to produce the search index as a javascript file or as a JSON file
+# Accepted value "elasticlunr_javascript" or "elasticlunr_json"
+index_format = "elasticlunr_json"
 
 [markdown]
 # Whether to do syntax highlighting
@@ -14,3 +36,36 @@ highlight_code = false
 
 [extra]
 # Put all your custom variables here
+[extra.papermod]
+title = "PaperMod"
+default_theme = "auto"
+theme = "light"
+language_direction = "auto"
+keywords = ["blog", "linux", "计算机"]
+show_theme_toggle = true
+show_scroll_to_top = true
+show_code_copy_buttons = true
+show_reading_time = true
+show_word_count = false
+show_post_nav_links = true
+show_post_meta = true
+default_toc_open = false
+show_post_edit_button = false
+edit_post_url = "https://github.com/cydave/zola-theme-papermod/tree/master"
+#copyright = ""
+date_format = "%Y-%m-%d"
+navigation = [
+    { url = "$BASE_URL/archive", title = "Archive" },
+    { url = "$BASE_URL/tags", title = "Tags" },
+#    { url = "$BASE_URL/search", title = "Search" },
+    { url = "https://getzola.org/", title = "Zola", is_external = true }
+]
+
+home_title = "PaperMod"
+home_content = ""
+social_icons = [
+    { url = "https://github.com/small-white0-0", title = "GitHub", icon = "github" },
+    #{ url = "https://infosec.exchange/@cydave", title = "Mastodon", icon = "mastodon" },
+    #{ url = "https://twitter.com/_cydave", title = "Twitter", icon = "twitter" },
+    { url = "$BASE_URL/atom.xml", title = "RSS", icon = "rss" },
+]
