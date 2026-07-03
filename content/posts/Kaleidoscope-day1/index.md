@@ -10,6 +10,7 @@ tags = ["Kaleidoscope", "llvm"]
 
 
 总结一下, 不完整的定义：
+```
 S: definition | external | expr | ';'
 definition: 'def' prototype expr
 external: 'extern' prototype 
@@ -21,4 +22,4 @@ IDENTIFIER:  LETTER (LETTER | DIGIT)*
 NUMBER: DIGIT+  ( '.' DIGIT+)?
 LETTER:  [a-zA-Z_]
 DIGIT: [0-9]
-
+```
